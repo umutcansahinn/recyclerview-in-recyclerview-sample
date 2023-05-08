@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:padding="8dp"
+    android:background="#1E88E5"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/textViewCompanyName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Apple"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:id="@+id/textViewWorkerCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="11"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewCompanyName"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/childRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4DD0E1"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="horizontal"
+        tools:listitem="@layout/child_recycler_view_item"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewWorkerCount"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
